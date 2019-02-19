@@ -1,0 +1,5 @@
+{
+	"minlength": "minlength.requiredLength",
+	"maxlength": "maxlength.requiredLength",
+	"minAge": "minAge.age"
+}
