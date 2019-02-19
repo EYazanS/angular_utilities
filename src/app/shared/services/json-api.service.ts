@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError, of } from 'rxjs';
 
-@Injectable()
+@Injectable({
+	providedIn: 'root'
+})
 export class JsonApiService {
 
 	constructor(private http: HttpClient) { }

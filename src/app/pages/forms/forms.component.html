@@ -1,0 +1,26 @@
+<mat-card>
+	<mat-card-header>
+		{{ 'Forms' | i18n }}
+	</mat-card-header>
+	<mat-card-content>
+		<form [formGroup]="form" id="testForm">
+			<mat-form-field appearance="fill">
+				<mat-label>
+					{{ 'Name' | i18n }}
+				</mat-label>
+				<input matInput formControlName="name" id="name" name="name" placeholder="{{ 'Name' | i18n }}" />
+				<mat-error *ngIf="validator.hasErrors(name)">
+					{{ validator.getErrorMessage(name) }}
+				</mat-error>
+				<mat-hint>
+					{{ name.value?.length || 0 }} / 15
+				</mat-hint>
+			</mat-form-field>
+		</form>
+	</mat-card-content>
+	<mat-card-actions>
+		<button mat-raised-button color="primary" type="submit" form="testForm">
+			{{ 'Save' |i18n }}
+		</button>
+	</mat-card-actions>
+</mat-card>

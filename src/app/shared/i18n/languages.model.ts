@@ -8,7 +8,7 @@ export const languages: any = [
 		dir: 'rtl'
 	},
 	{
-		key: 'us',
+		key: 'en',
 		alt: 'United States',
 		title: 'English (US)',
 		dir: 'ltr'

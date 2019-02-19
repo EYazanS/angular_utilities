@@ -5,7 +5,9 @@ import { FormGroup, AbstractControl } from '@angular/forms';
 import { I18nService } from '../i18n/i18n.service';
 import { JsonApiService } from '../services/json-api.service';
 
-@Injectable()
+@Injectable({
+	providedIn: 'root'
+})
 export class ValidationBase {
 	private validations;
 	private repalceKeys;

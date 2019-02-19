@@ -20,7 +20,7 @@ export class I18nService {
 	constructor(private jsonApiService: JsonApiService, private ref: ApplicationRef) {
 		this.state = new Subject();
 		this.validationState = new BehaviorSubject<any>({});
-		this.initLanguage(localStorage.getItem('locale') || 'ar');
+		this.initLanguage(localStorage.getItem('locale') || 'en');
 		this.fetch(this.currentLanguage.key);
 	}
 
